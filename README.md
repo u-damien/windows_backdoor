@@ -38,4 +38,6 @@ For my part, I will use keystroke injection thanks to a microcontroller like Dig
 <ul>
   <li><a href="https://startingelectronics.org/tutorials/arduino/digispark/digispark-windows-setup/">Digispark Setup in Windows 10</a></li>
   <li><a href="https://linuxhint.com/setup-apache-virtual-hosts-on-ubuntu-22-04/">Apache Virtual Host Setup</a></li>
+  <li><a href="https://www.ebay.com/itm/173455563728">Bad USB Arduino Leonardo</a></li>
+  <li><a href="https://reference.arduino.cc/reference/en/language/functions/usb/keyboard/">Keyboard Library for Arduino</a></li>
 </ul>
